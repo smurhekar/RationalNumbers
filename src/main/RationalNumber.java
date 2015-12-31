@@ -7,13 +7,18 @@ public class RationalNumber {
     private final Integer numerator;
     private final Integer denominator;
 
-    public RationalNumber(Integer numerator, Integer denomenator) {
+    public RationalNumber(Integer numerator, Integer denominator) {
         this.numerator = numerator;
-        this.denominator = denomenator;
+        this.denominator = denominator;
     }
 
     public RationalNumber add(RationalNumber rationalNumber) {
         return new RationalNumber(this.numerator * rationalNumber.denominator + rationalNumber.numerator * this.denominator,
+                denominator * rationalNumber.denominator);
+    }
+
+    public RationalNumber substract(RationalNumber rationalNumber) {
+        return new RationalNumber(this.numerator * rationalNumber.denominator - rationalNumber.numerator * this.denominator,
                 denominator * rationalNumber.denominator);
     }
 
@@ -29,5 +34,4 @@ public class RationalNumber {
         }
         return (rationalNumber.numerator.equals(numerator) && rationalNumber.denominator.equals(denominator));
     }
-
 }

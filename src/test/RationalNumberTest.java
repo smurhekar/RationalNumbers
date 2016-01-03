@@ -21,4 +21,17 @@ public class RationalNumberTest {
         RationalNumber rationalNumber = new RationalNumber(3, 4);
         assertEquals(new RationalNumber(11, 20), rationalNumber.substract(new RationalNumber(1, 5)));
     }
+
+    @Test
+    public void shouldBeAbleToMultiplyRationalNumber(){
+        RationalNumber rationalNumber = new RationalNumber(1, 2);
+        assertEquals(new RationalNumber(1, 5), rationalNumber.multiply(new RationalNumber(2, 5)));
+    }
+
+    @Test
+    public void shouldBeAbleToAddRationalNumberAndSimplify(){
+        RationalNumber rationalNumber = new RationalNumber(2, 4);
+        assertEquals(new RationalNumber(5, 8), rationalNumber.add(new RationalNumber(2, 16)));
+    }
+
 }

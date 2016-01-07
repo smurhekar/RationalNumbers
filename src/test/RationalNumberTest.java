@@ -34,4 +34,10 @@ public class RationalNumberTest {
         assertEquals(new RationalNumber(5, 8), rationalNumber.add(new RationalNumber(2, 16)));
     }
 
+    @Test
+    public void shouldBeAbleToDivideRationNumberAndSimplify(){
+        RationalNumber rationalNumber = new RationalNumber(1, 2);
+        assertEquals(new RationalNumber(3, 1), rationalNumber.divide(new RationalNumber(1, 6)));
+    }
+
 }

@@ -27,6 +27,11 @@ public class RationalNumber {
         return rationalNumber1.simplify();
     }
 
+    public RationalNumber divide(RationalNumber rationalNumber) {
+        RationalNumber calculatedRationalNumber = new RationalNumber(numerator * rationalNumber.denominator, denominator * rationalNumber.numerator);
+        return calculatedRationalNumber.simplify();
+    }
+
     private RationalNumber simplify() {
         int start = 2;
         int end  = 0;
